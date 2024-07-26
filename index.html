@@ -10,20 +10,19 @@
     <style></style>
   </head>
   <body>
+    <div class="header-top"></div>
     <header class="header-area">
-      <h1>Search for your favorite movies</h1>
-
-      <form class="form-area">
-        <input
-          class="input-box"
-          type="text"
-          placeholder="영화 제목을 입력하세요"
-        />
-        <div class="vertical-divider"></div>
-        <button class="input-btn" onclick="click">검색</button>
-      </form>
+      <h1>무비 파인더</h1>
+      <h3>영화를 검색해보세요</h3>
     </header>
 
+    <div class="input-container">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="영화 이름을 검색해주세요..."
+      />
+    </div>
     <!-- movie-list -->
     <div id="movie-container"></div>
 
