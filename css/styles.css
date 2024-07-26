@@ -1,0 +1,119 @@
+.header-area {
+  background-color: aqua;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.header-area h1 {
+  margin: auto;
+}
+
+.form-area {
+  background-color: red;
+  position: absolute;
+  margin-top: 80px;
+  border-radius: 8px;
+  height: 64px;
+  width: 628px;
+}
+
+.input-box {
+  box-sizing: border-box;
+  width: 80%;
+  height: 100%;
+  background-color: wheat;
+  border-radius: 8px;
+  border: none;
+}
+
+.input-btn {
+  border: none;
+  height: 50px;
+  background-color: wheat;
+}
+
+.vertical-divider {
+  display: inline-block;
+  width: 2px;
+  height: 50%;
+  margin-right: 24px;
+  background: #e7e7e9;
+}
+
+#movie-container {
+  margin: 80px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  width: 300px;
+  height: 650px;
+  margin: 20px;
+  position: relative;
+  /* transition: transform 0.2s; */
+}
+
+/* .movie-card:hover {
+  transform: translateY(-10px);
+} */
+
+.movie-card img {
+  width: 250px;
+  height: 400px;
+  border-radius: 10px;
+  margin: 20px 20px 0 20px;
+  object-fit: cover;
+}
+
+.movie-card h3 {
+  font-size: 1.2em;
+  margin: 20px 10px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.movie-card p {
+  padding: 0 20px;
+  font-size: 0.9em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+}
+
+.movie-card span {
+  display: block;
+  /* background: #ffd700; */
+  padding: 5px 0;
+  font-size: 0.9em;
+
+  position: absolute; /* 카드의 하단에 고정 */
+  bottom: 0;
+
+  left: 50%; /* 수평 가운데 정렬 */
+  transform: translateX(-50%); /* 가운데 정렬을 정확히 맞추기 위한 변환 */
+  width: 100%;
+  text-align: center;
+}
+
+.rating.low {
+  background-color: rgb(255, 103, 103);
+}
+
+.rating.medium {
+  background-color: #ffd700;
+}
+
+.rating.high {
+  background-color: rgb(79, 184, 79);
+}
