@@ -24,11 +24,17 @@ function createMovieCard(movie) {
           <h3>${movie.title}</h3>
           <p>${movie.overview}</p>
           <p>Rating: ${movie.vote_average.toFixed(2)}</p>
-          <p>Movie ID: ${movie.id}</p>
+          <button class="idBtn">ID값 보기</button>
        </div>`;
 
     modal.classList.remove("hidden");
+
+    const idBtn = document.querySelector(".idBtn");
+    idBtn.addEventListener("click", () => {
+      alert(`Movie ID: ${movie.id}`);
+    });
   });
+
   ratingColor(movie.vote_average, card);
 
   return card;
@@ -99,15 +105,26 @@ function createRatedMovieCard(movie) {
     const modal = document.getElementById("modalContainer");
     const modalMovieId = document.querySelector(".modalMovieId");
     modalMovieId.innerHTML = `
+    <div>
+     <img class="modalImg" src="https://image.tmdb.org/t/p/w500${
+       movie.poster_path
+     }" alt="${movie.title}">
+    </div>
         <div>
           <h3>${movie.title}</h3>
           <p>${movie.overview}</p>
           <p>Rating: ${movie.vote_average.toFixed(2)}</p>
-          <p>Movie ID: ${movie.id}</p>
+          <button class="idBtn">ID값 보기</button>
        </div>`;
 
     modal.classList.remove("hidden");
+
+    const idBtn = document.querySelector(".idBtn");
+    idBtn.addEventListener("click", () => {
+      alert(`Movie ID: ${movie.id}`);
+    });
   });
+
   ratingColor(movie.vote_average, card);
 
   return card;
@@ -140,11 +157,15 @@ function createNowPlayingMovieCard(movie) {
           <h3>${movie.title}</h3>
           <p>${movie.overview}</p>
           <p>Rating: ${movie.vote_average.toFixed(2)}</p>
-          <p>Movie ID: ${movie.id}</p>
-
+          <button class="idBtn">ID값 보기</button>
        </div>`;
 
     modal.classList.remove("hidden");
+
+    const idBtn = document.querySelector(".idBtn");
+    idBtn.addEventListener("click", () => {
+      alert(`Movie ID: ${movie.id}`);
+    });
   });
   ratingColor(movie.vote_average, card);
 

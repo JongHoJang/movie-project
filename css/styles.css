@@ -216,6 +216,7 @@ nav ul li a.active {
 
 .modalImg {
   width: 200px;
+  border-radius: 8px;
 }
 
 #modalContainer.hidden {
