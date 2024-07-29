@@ -13,9 +13,7 @@
     <nav class="nav_container">
       <ul>
         <li>
-          <a href="./index.html" class="menu-item" style="color: orange"
-            >Popular Movies</a
-          >
+          <a href="./index.html" class="menu-item">Popular Movies</a>
         </li>
         <li>
           <a href="./rated-movies-page.html" class="menu-item"
@@ -23,15 +21,19 @@
           >
         </li>
         <li>
-          <a href="./now-playing-movies-page.html" class="menu-item"
+          <a
+            href="./now-playing-movies-page.html"
+            class="menu-item"
+            style="color: orange"
             >Now Playing</a
           >
         </li>
       </ul>
     </nav>
     <header class="header-area">
-      <h1>Popular Movies</h1>
-      <h3>현재 인기있는 영화를 검색해보세요</h3>
+      <h1>Now Playing in Korea</h1>
+      <h3>한국에서 상영 중인 영화들을 검색해보세요</h3>
+      <p class="result-count"></p>
     </header>
 
     <div class="input-container">
@@ -42,7 +44,7 @@
       />
     </div>
     <!-- movie-list -->
-    <div id="movie-container"></div>
+    <div id="now-playing-movie-container"></div>
 
     <!-- 모달창 html -->
     <div id="modalContainer" class="hidden">
