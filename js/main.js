@@ -13,6 +13,7 @@ function myFunction() {
   document.getElementById("myBar").style.width = scrolled + "%";
 }
 
+// 카드 생성
 function createMovieCard(movie) {
   const card = document.createElement("div");
   card.className = "movie-card";
@@ -91,15 +92,25 @@ function ratingColor(rate, card) {
 document.getElementById("search-input").addEventListener("input", () => {
   const query = document.getElementById("search-input").value.toLowerCase();
   const movieCards = document.querySelectorAll(".movie-card");
+  const noResultsMessage = document.getElementById("no-results");
+  let hasResults = false;
 
   movieCards.forEach((card) => {
     const title = card.querySelector("h3").textContent.toLowerCase();
     if (title.includes(query)) {
       card.style.display = "block";
+      hasResults = true;
     } else {
       card.style.display = "none";
     }
   });
+
+  if (hasResults) {
+    noResultsMessage.style.display = "none";
+  } else {
+    noResultsMessage.style.display = "block";
+    noResultsMessage.innerHTML = `"${query}" 단어를 포함한 영화제목이 없습니다.`;
+  }
 });
 
 //RatedMovie
